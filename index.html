@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amiel's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -12,13 +13,15 @@
         <div class="container">
             <nav>
                 <img src="assets/Amiel.png" class="logo">
-                <ul>
+                <ul id = "sidemenu">
                     <li> <a href = '#header'> Home</a> </li>
                     <li> <a href = '#About'> About</a> </li>
                     <li> <a href = '#Quiz'> Quiz</a> </li>
                     <li> <a href = '#Exam'> Exam</a> </li>
                     <li> <a href = '#Lab'> Lab</a> </li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class = "header-text">
                 <p>BSCS Student</p>
