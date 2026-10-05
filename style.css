@@ -55,6 +55,29 @@ nav {
     width: 200px;
 }
 
+.section-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.term-select {
+    background: #111;
+    color: #fff;
+    border: 1px solid #e21818;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.term-select:focus {
+    outline: none;
+    border-color: #fff;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
