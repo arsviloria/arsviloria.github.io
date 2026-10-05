@@ -1,46 +1,59 @@
-document.querySelectorAll('.slideshow-container').forEach((container) => {
-    const slides = container.querySelectorAll('.slide');
-    const dots = container.querySelectorAll('.dot');
+const termSelect = document.getElementById('termSelect');
+
+function initGallery(container) {
+    const allSlides = Array.from(container.querySelectorAll('.slide'));
+    const dotsContainer = container.querySelector('.dots');
     const prevBtn = container.querySelector('.prev');
     const nextBtn = container.querySelector('.next');
- 
+
+    let activeSlides = [];
     let current = 0;
 
- 
+    function renderDots() {
+        dotsContainer.innerHTML = '';
+        activeSlides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => showSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+    }
+
     function showSlide(index) {
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
+        if (activeSlides.length === 0) return;
+        if (index >= activeSlides.length) index = 0;
+        if (index < 0) index = activeSlides.length - 1;
         current = index;
- 
-        slides.forEach((slide) => (slide.style.display = 'none'));
+
+        allSlides.forEach((slide) => (slide.style.display = 'none'));
+        const dots = dotsContainer.querySelectorAll('.dot');
         dots.forEach((dot) => dot.classList.remove('active'));
- 
-        slides[current].style.display = 'block';
+
+        activeSlides[current].style.display = 'block';
         if (dots[current]) dots[current].classList.add('active');
     }
- 
-   
- 
-    prevBtn.addEventListener('click', () => {
-        showSlide(current - 1);
-        
+
+    function setTerm(term) {
+        activeSlides = allSlides.filter((slide) => slide.dataset.term === term);
+        renderDots();
+        showSlide(0);
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(current - 1));
+    nextBtn.addEventListener('click', () => showSlide(current + 1));
+
+    container.setTerm = setTerm;
+    setTerm(termSelect.value);
+}
+
+document.querySelectorAll('.slideshow-container').forEach(initGallery);
+
+termSelect.addEventListener('change', () => {
+    document.querySelectorAll('.slideshow-container').forEach((container) => {
+        container.setTerm(termSelect.value);
     });
- 
-    nextBtn.addEventListener('click', () => {
-        showSlide(current + 1);
-        
-    });
- 
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            showSlide(i);
-            
-        });
-    });
- 
-    showSlide(0);
 });
- 
+
 var sidemenu = document.getElementById("sidemenu");
 function openmenu (){
     sidemenu.style.right = "0";
