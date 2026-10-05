@@ -52,31 +52,62 @@
     <!-----------------Quiz section----------------->
     <div id = "Quiz">
         <div class="container">
-            <h1 class="sub-title">
-                Quiz
-            </h1>
+            <div class = "section-header">
+                <h1 class = "sub-title">Quiz</h1>
+                <select id = "termSelect" class = "term-select">
+                    <option value = "prelim" selected>Prelim</option>
+                    <option value = "midterm">Midterm</option>
+                    <option value = "finals">Finals</option>
+                </select>
+            </div>
             <div class="slideshow-container">
                 <div class = "slides"> 
-                    <div class = "slide">
+                    <div class = "slide" data-term = "prelim">
                         <div class = "caption">Quiz 1</div>
                         <img src = "assets/quiz1.png" alt = "Quiz 1">
                     </div>
-                    <div class = "slide">
+                    <div class = "slide" data-term = "prelim">
                         <img src = "assets/quiz2.png" alt = "Quiz 2">
                         <div class = "caption">Quiz 2</div>
                     </div>
-                    <div class = "slide">
+                    <div class = "slide" data-term = "prelim">
                         <img src = "assets/quiz3.png" alt = "Quiz 3">
+                        <div class = "caption">Quiz 3</div>
+                    </div>
+                    <div class = "slide" data-term = "prelim">
+                        <img src = "assets/longquiz.png" alt = "Long Quiz">
+                        <div class = "caption">Long Quiz</div>
+                    </div>
+
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/quiz1-midterm.png" alt = "Quiz 1">
+                        <div class = "caption">Quiz 1</div>
+                    </div>
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/quiz2-midterm.png" alt = "Quiz 2">
+                        <div class = "caption">Quiz 2</div>
+                    </div>
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/quiz3-midterm.png" alt = "Quiz 3">
+                        <div class = "caption">Quiz 3</div>
+                    </div>
+                    
+                    <div class = "slide" data-term = "finals">
+                        <img src = "assets/quiz1-finals.png" alt = "Quiz 1">
+                        <div class = "caption">Quiz 1</div>
+                    </div>
+                    <div class = "slide" data-term = "finals">
+                        <img src = "assets/quiz2-finals.png" alt = "Quiz 2">
+                        <div class = "caption">Quiz 2</div>
+                    </div>
+                    <div class = "slide" data-term = "finals">
+                        <img src = "assets/quiz3-finals.png" alt = "Quiz 3">
                         <div class = "caption">Quiz 3</div>
                     </div>
                 </div>
             <a class = "prev">&#10094;</a>
             <a class = "next">&#10095;</a>
-                <div class = "dots">
-                    <span class = "dot"></span>
-                    <span class = "dot"></span>
-                    <span class = "dot"></span>
-                </div>
+                <div class = "dots"></div>
             </div>
         </div>
     </div>
@@ -90,26 +121,22 @@
             </h1>
             <div class = "slideshow-container">
                 <div class = "slides"> 
-                    <div class = "slide">
-                        <img src = "assets/exam1.png" alt = "Exam 1">
-                        <div class = "caption">Exam 1</div>
+                    <div class = "slide" data-term = "prelim">
+                        <img src = "assets/exam1.jpg" alt = "Exam 1">
+                        <div class = "caption">Prelim Exam</div>
                     </div>
-                    <div class = "slide">
+                    <div class = "slide" data-term = "midterm">
                         <img src = "assets/exam2.png" alt = "Exam 2">
-                        <div class = "caption">Exam 2</div>
+                        <div class = "caption">Midterm Exam</div>
                     </div>
-                    <div class = "slide">
+                    <div class = "slide" data-term = "finals">
                         <img src = "assets/exam3.png" alt = "Exam 3">
-                        <div class = "caption">Exam 3</div>
+                        <div class = "caption">Finals Exam</div>
                     </div>
                 </div>
             <a class = "prev">&#10094;</a>
             <a class = "next">&#10095;</a>
-                <div class = "dots">
-                    <span class = "dot"></span>
-                    <span class = "dot"></span>
-                    <span class = "dot"></span>
-                </div>
+                <div class = "dots"></div>
             </div>
         </div>
     </div>
@@ -123,30 +150,37 @@
             </h1>
             <div class = "slideshow-container">
                 <div class = "slides"> 
-                    <div class = "slide">
+                    <div class = "slide" data-term = "prelim">
                         <a href = "assets/Viloria_Lab1.pdf" target="_blank" download>
                         <img src = "assets/lab1.png" alt = "Lab 1">
                         </a>
                         <div class = "caption">Lab 1</div>
                     </div>
-                    <div class = "slide">
+                    <div class = "slide" data-term = "prelim">
                         <a href = "assets/Viloria_Lab2.pdf" target="_blank" download>
                         <img src = "assets/lab2.png" alt ="Lab 2">
                         </a>
                         <div class = "caption">Lab 2</div>
                     </div>
-                    <div class = "slide">
-                        <img src = "assets/lab3.png" alt = "Lab 3">
-                        <div class = "caption">Lab 3</div>
+                   
+
+                    <div class = "slide" data-term = "midterm">
+                        <a href = "assets/Viloria_Lab1_Midterm.pdf" target="_blank" download>
+                        <img src = "assets/lab1-midterm.png" alt = "Lab 1">
+                        </a>
+                        <div class = "caption">Lab 1</div>
+                    </div>
+
+                    <div class = "slide" data-term = "finals">
+                        <a href = "assets/Viloria_Lab1_Finals.pdf" target="_blank" download>
+                        <img src = "assets/lab1-finals.png" alt = "Lab 1">
+                        </a>
+                        <div class = "caption">Lab 1</div>
                     </div>
                 </div>
             <a class = "prev">&#10094;</a>
             <a class = "next">&#10095;</a>
-                <div class = "dots">
-                    <span class = "dot"></span>
-                    <span class = "dot"></span>
-                    <span class = "dot"></span>
-                </div>
+                <div class = "dots"></div>
             </div>
         </div>
     </div>
