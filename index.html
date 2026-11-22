@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amiel's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div id ="header">
+        <div class="container">
+            <nav>
+                <img src="assets/Amiel.png" class="logo">
+                <ul id = "sidemenu">
+                    <li> <a href = '#header'> Home</a> </li>
+                    <li> <a href = '#About'> About</a> </li>
+                    <li> <a href = '#Quiz'> Quiz</a> </li>
+                    <li> <a href = '#Exam'> Exam</a> </li>
+                    <li> <a href = '#Lab'> Lab</a> </li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class = "header-text">
+                <p>BSCS Student</p>
+                <h1>Hi, I'm <span>Amiel</span> Radnitz<br>Viloria</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------About section----------------->
+    <div id = "About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/about.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">
+                        About Me
+                    </h1>
+                    <p>
+                        Hi! I am Amiel. A third year BSCS student at Philippine Christian University - Dasmariñas Campus. This website portfolio contains all of my quizzes, exams, and labs from my Elective 3 subject. I created this in hopes of looking back at my work and seeing how much I have improved since the beginning of the semester. I hope that this portfolio will be a concrete proof of my hardwork, improvements, and dedication to my studies. I also hope that this portfolio will be able to showcase how much I have truly learned from this subject and how much I have grown. Thank you for taking the time to view my portfolio and I hope you enjoy it!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------Quiz section----------------->
+    <div id = "Quiz">
+        <div class="container">
+            <div class = "section-header">
+                <h1 class = "sub-title">Quiz</h1>
+                <select id = "termSelect" class = "term-select">
+                    <option value = "prelim" selected>Prelim</option>
+                    <option value = "midterm">Midterm</option>
+                    <option value = "finals">Finals</option>
+                </select>
+            </div>
+            <div class="slideshow-container">
+                <div class = "slides"> 
+                    <div class = "slide" data-term = "prelim">
+                        <div class = "caption">Quiz 1</div>
+                        <img src = "assets/quiz1.png" alt = "Quiz 1">
+                    </div>
+                    <div class = "slide" data-term = "prelim">
+                        <img src = "assets/quiz2.png" alt = "Quiz 2">
+                        <div class = "caption">Quiz 2</div>
+                    </div>
+                    <div class = "slide" data-term = "prelim">
+                        <img src = "assets/quiz3.png" alt = "Quiz 3">
+                        <div class = "caption">Quiz 3</div>
+                    </div>
+                    <div class = "slide" data-term = "prelim">
+                        <img src = "assets/longquiz.png" alt = "Long Quiz">
+                        <div class = "caption">Long Quiz</div>
+                    </div>
+
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/quiz1-midterm.png" alt = "Quiz 1">
+                        <div class = "caption">Quiz 1</div>
+                    </div>
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/quiz2-midterm.png" alt = "Quiz 2">
+                        <div class = "caption">Quiz 2</div>
+                    </div>
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/quiz3-midterm.png" alt = "Midterm LongQuiz">
+                        <div class = "caption">Midterm Long Quiz</div>
+                    </div>
+                    
+                    <div class = "slide" data-term = "finals">
+                        <img src = "assets/quiz1-finals.png" alt = "Quiz 1">
+                        <div class = "caption">Quiz 1</div>
+                    </div>
+                   
+                </div>
+            <a class = "prev">&#10094;</a>
+            <a class = "next">&#10095;</a>
+                <div class = "dots"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------Exam section----------------->
+    <div id = "Exam">
+        <div class="container">
+            <h1 class="sub-title">
+                Exam
+            </h1>
+            <div class = "slideshow-container">
+                <div class = "slides"> 
+                    <div class = "slide" data-term = "prelim">
+                        <img src = "assets/exam1.jpg" alt = "Exam 1">
+                        <div class = "caption">Prelim Exam</div>
+                    </div>
+                    <div class = "slide" data-term = "midterm">
+                        <img src = "assets/exam2.png" alt = "Exam 2">
+                        <div class = "caption">Midterm Exam</div>
+                    </div>
+                    <div class = "slide" data-term = "finals">
+                        <img src = "assets/exam3.png" alt = "Exam 3">
+                        <div class = "caption">Finals Exam</div>
+                    </div>
+                </div>
+            <a class = "prev">&#10094;</a>
+            <a class = "next">&#10095;</a>
+                <div class = "dots"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------Lab section----------------->
+    <div id = "Lab">
+        <div class="container">
+            <h1 class="sub-title">
+                Lab
+            </h1>
+            <div class = "slideshow-container">
+                <div class = "slides"> 
+                    <div class = "slide" data-term = "prelim">
+                        <a href = "assets/Viloria_Lab1.pdf" target="_blank" download>
+                        <img src = "assets/lab1.png" alt = "Lab 1">
+                        </a>
+                        <div class = "caption">Lab 1</div>
+                    </div>
+                    <div class = "slide" data-term = "prelim">
+                        <a href = "assets/Viloria_Lab2.pdf" target="_blank" download>
+                        <img src = "assets/lab2.png" alt ="Lab 2">
+                        </a>
+                        <div class = "caption">Lab 2</div>
+                    </div>
+                   
+
+                    <div class = "slide" data-term = "midterm">
+                        <a href = "assets/Viloria_Lab1_Midterm.pdf" target="_blank" download>
+                        <img src = "assets/lab1-midterm.png" alt = "Lab 1">
+                        </a>
+                        <div class = "caption">Lab 1</div>
+                    </div>
+
+                    <div class = "slide" data-term = "finals">
+                        <a href = "assets/Viloria_Lab1_Finals.pdf" target="_blank" download>
+                        <img src = "assets/lab1-finals.png" alt = "Lab 1">
+                        </a>
+                        <div class = "caption">Lab 1</div>
+                    </div>
+                </div>
+            <a class = "prev">&#10094;</a>
+            <a class = "next">&#10095;</a>
+                <div class = "dots"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    <p>©2026 Amiel Viloria</p>
+</footer>
+</html>
